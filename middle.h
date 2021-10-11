@@ -11,7 +11,7 @@ int itc_max_num(long long num);
 int itc_rev_num(long long num);
 int itc_null_count(long long num); 
 bool itc_mirror_num(long long num); 
-bool itc_mirror_count(long long num);
+int itc_mirror_count(long long num);
 int itc_second_simple_max_num(long long num); 
 long long itc_bin_num(long long num); 
 long long itc_oct_num(long long num);
