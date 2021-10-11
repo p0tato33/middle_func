@@ -6,7 +6,7 @@ using namespace std;
 
 void itc_num_print(int num); 
 int itc_len_num(long long num); 
-int itc_multi_num(long long num);
+long long itc_multi_num(long long num);
 int itc_max_num(long long num); 
 int itc_rev_num(long long num);
 int itc_null_count(long long num); 
