@@ -157,41 +157,6 @@ long long itc_oct_num(long long num) {
 	return n;
 }
 
-long long itc_oct_num(long long num) {
-	long long n = 0;
-	int i = 0;
-	long long n_abs = itc_abs(num);
-	while (n_abs != 0) {
-		n += n_abs % 8 * itc_pow(10, i);
-		n_abs /= 8;
-		i += 1;
-	}
-	return n;
-}
-
-int itc_rev_bin_num(long long num) {
-	long long n = 0;
-	int i = 0;
-	long long n_abs = num;
-	while (n_abs != 0) {
-		n += itc_pow(2, i) * (n_abs % 2);
-		n_abs /= 10;
-		i += 1;
-	}
-	return n;
-}
-
-int itc_rev_oct_num(long long num) {
-	long long n = 0;
-	int i = 0;
-	long long n_abs = num;
-	while (n_abs != 0) {
-		n += itc_pow(8, i) * n_abs % 10;
-		n_abs /= 10;
-		i += 1;
-	}
-	return n;
-}
 
 long long itc_abs(long long num1) {
 	if (num1 >= 0)
