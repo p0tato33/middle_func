@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 long long itc_bin_num(long long num) { 
 	long long n = 0;
