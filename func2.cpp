@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 int itc_sum_num(long long num) {
 	long long num3 = itc_abs(num);
