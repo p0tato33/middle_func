@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 int itc_rev_num(long long num) { // 7
 	long long num3 = itc_abs(num);
