@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 bool itc_mirror_num(long long num) { 
 	long long num3 = itc_abs(num);
