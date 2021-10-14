@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 int itc_second_max_num(long long num) {
 	long long num1 = itc_abs(num);
