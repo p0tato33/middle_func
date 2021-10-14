@@ -1,6 +1,4 @@
-#include <iostream>
 #include "middle.h"
-using namespace std;
 
 long long itc_abs(long long num1) {
 	if (num1 >= 0)
