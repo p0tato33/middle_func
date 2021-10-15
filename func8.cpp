@@ -17,11 +17,11 @@ int itc_rev_oct_num(long long num)
     int counter = 1;
     int last;
     int perevod = 0;
-    int len=itc_len_num(num);
+    int len = itc_len_num(num);
     for(int i = 0; i < len; i++)
     {
         last = num % 10;
-        perevod =p erevod + last * counter;
+        perevod = perevod + last * counter;
         counter = counter * 8;
         num = num / 10;
     }
