@@ -1,24 +1,40 @@
 #include "middle.h"
-
 int itc_second_max_num(long long num)
 {
     num = itc_abs(num);
-    int last = itc_min_num(num);
-    int maxx = itc_max_num(num);
-    while(num != 0)
-    {
-        if(num & 10 > last && num % 10 < maxx)
-            last = num % 10;
-        num /= 10;
-        
+    int maxi = -1, sndmax = -2, b = itc_len_num(num);
+    for (int i = 0; i < b; i++){
+        if (num % 10 > maxi){
+            sndmax = maxi;
+            maxi = num % 10;
+        }
+        else if((num % 10 <= maxi) && (num % 10 > sndmax)){
+            sndmax = num % 10;
+        }
+        num = num / 10;
     }
-    return last;
+    return (sndmax);
 }
 
-int itc_second_simple_max_num(long long num) {
-	int max1 = itc_max_num(num);
-	int max2 = itc_second_max_num(num);
-	if (max1 != itc_sum_num(num) / itc_len_num(num))
-		return max2;
-	return -1;
+int itc_second_simple_max_num(long long num)
+{
+    num = itc_abs(num);
+    if (num < 10){
+        return -1;
+    }
+    int check = 0, max1 = 0, max2 = 0;
+    while (num > 0){
+        if (num % 10 >= max1){
+            max2 = max1;
+            max1 = num % 10;
+        }
+        if ((num % 10 < max1) && (num % 10 > max2)){
+            max2 = num % 10;
+        }
+        num = num / 10;
+    }
+    if (max1 == max2){
+        return -1;
+    }
+    return (max2);
 }
