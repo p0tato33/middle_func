@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+long long itc_abs(long long num1);
+long long itc_pow(long long num1, long long num2);
 void itc_num_print(int num);       // 1
 int itc_len_num(long long num);    // 2
 int itc_sum_num(long long num);    // 3
@@ -20,11 +22,5 @@ long long itc_bin_num(long long num);  // 13
 long long itc_oct_num(long long num);  // 14
 int itc_rev_bin_num(long long num);   // 15
 int itc_rev_oct_num(long long num);   // 16
-int itc_second_max_num(long long num); 
-long long itc_abs(long long num1);
-long long itc_pow(long long num1, long long num2);
-
-int itc_rev_covert_num(long long num, int num2);
-
 
 #endif // MIDDLE_H
