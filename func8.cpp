@@ -14,16 +14,16 @@ int itc_rev_bin_num(long long num) {
 
 int itc_rev_oct_num(long long num)
 {
-    int counter=1;
+    int counter = 1;
     int last;
-    int perevod=0;
+    int perevod = 0;
     int len=itc_len_num(num);
-    for(int i=0;i<len;i++)
+    for(int i = 0; i < len; i++)
     {
-        last=num%10;
-        perevod=perevod+last*counter;
-        counter=counter*8;
-        num=num/10;
+        last = num % 10;
+        perevod =p erevod + last * counter;
+        counter = counter * 8;
+        num = num / 10;
     }
     return perevod;
 }
