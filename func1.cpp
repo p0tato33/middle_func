@@ -4,19 +4,21 @@ void itc_num_print(int num) {
 	cout << num << endl;
 }
 
-int itc_len_num(long long num) {
-	long long num1 = itc_abs(num);
-	int counter = 0;
-	while (num1 != 0) {
-		if (num1 / 10 > 0) {
-			counter++;
-			num1 /= 10;
-		}
-		else {
-			if (num1 % 10 >= 0)
-				counter++;
-			return counter;
-		}
-	}
-	return counter;
+int itc_len_num(long long num)
+{
+    int counter=0;
+    if(num<0)
+    {
+        num=num*(-1);
+    }
+    if(num==0)
+    {
+        return 1;
+    }
+    while(num>0)
+    {
+        counter=counter+1;
+        num=num/10;
+    }
+    return (int(counter));
 }
