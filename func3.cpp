@@ -12,21 +12,21 @@ int itc_max_num(long long num) {
 
 int itc_min_num(long long num)
 {
-    if(num<0)
+    if(num < 0)
     {
-        num=num*(-1);
+        num = num * (-1);
     }
-    long long minnum=num%10;
+    long long minnum = num % 10;
     long long counter;
-    int len=itc_len_num(num);
-    for(int i=0;i<len;i++)
+    int len = itc_len_num(num);
+    for(int i = 0; i < len; i++)
     {
-        counter=num%10;
-        if(counter<minnum)
+        counter = num % 10;
+        if(counter < minnum)
         {
-            minnum=counter;
+            minnum = counter;
         }
-        num=num/10;
+        num = num / 10;
     }
     return(int(minnum));
 }
