@@ -16,11 +16,18 @@ int itc_rev_num(long long num)
     return(itc_len_num(num));
 }
 
-int itc_null_count(long long num) { // 8
-	int result = 0;
-	for (int n1 = itc_len_num(num); n1 > 0; n1--) {
-		if (num % itc_pow(10, n1) / itc_pow(10, n1 - 1) == 0)
-			result++;
-	}
-	return result;
+int itc_null_count(long long num)
+{
+    int counter=0;
+    int bw;
+    int len=itc_len_num(num);
+    for(int i=0; i<len;i++)
+    {
+        bw=num%10;
+        if(bw==0){
+            counter=counter+1;
+        }
+        num=num/10;
+    }
+    return counter;
 }
